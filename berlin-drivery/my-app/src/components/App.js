@@ -1,10 +1,13 @@
 import React from 'react';
+
+import Feed from './Feed/Feed';
+
 import './App.css';
 
 const App = () => {
   return (
-    <div>
-      hey hello
+    <div className="feed">
+      <Feed></Feed>
     </div>
   );
 }

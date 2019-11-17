@@ -1,0 +1,13 @@
+.elem {
+	margin: 20px 0px;
+}
+
+.feedLink {
+	color: white;
+	text-decoration: none;
+	font-size: 13px;
+}
+
+.feedLink:hover {
+	text-decoration: underline;
+}
