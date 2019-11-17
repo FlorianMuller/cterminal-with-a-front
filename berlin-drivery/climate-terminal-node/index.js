@@ -1,10 +1,22 @@
-const express = require('express')
-const app = express()
-const port = 8080
+const express = require('express');
+const cors = require('cors');
+const morgan = require('morgan');
+
+const app = express();
+const port = 8080;
+
 // may be pluggable 
 const feed_urls=[
     "https://news.google.com/rss/search?q=climate&hl=en-US&gl=US&ceid=US:en"
 ]
+
+//  Middleware
+app.use(morgan('dev'));
+// allowing cors in localhost to use dev React server from `create-react-app`
+app.use(cors({
+  origin: 'http://localhost:3000'
+}));
+
 app.get('/', (req, res) => res.send('Hello World!'));
 app.get('/climate-feed',(req,res)=>res.send(get_feed()));
 
