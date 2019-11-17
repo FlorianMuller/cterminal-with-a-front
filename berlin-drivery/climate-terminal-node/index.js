@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 8080
 // may be pluggable 
 const feed_urls=[
     "https://news.google.com/rss/search?q=climate&hl=en-US&gl=US&ceid=US:en"
